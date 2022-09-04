@@ -1,4 +1,26 @@
 @import url('./popup.css');
+@import url('./print.css');
+
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #section-to-print, #section-to-print * {
+      visibility: visible;
+    }
+    #section-to-print {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+}
+
+
+/* Размер формата A4 (210 × 297 мм) в пикселях
+при DPI = 75, разрешение формата А4 имеет 620 × 877 пикселей;
+при DPI = 150, разрешение формата А4 имеет 1240 × 1754 пикселей;
+при DPI = 300, разрешение формата А4 имеет 2480 × 3508 пикселей. */
 
 *,
 ::before,
@@ -7,17 +29,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+header {
+    margin-top: 100px;
+}
 
 .wrapper {
     width: 100%;
-    max-width: 600px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
 }
 
-.text {
-    padding: 20px;
+.container{
+    width: 1200px;
+    height: 848px;
+    background-image: url('../../assets/img/svg/bg.svg');
+    background-size: cover;
 }
 
-.field {
-    background-color: yellow;
-}
+
+
+
+
+
+
+
+
+
+
+
