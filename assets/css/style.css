@@ -1,0 +1,23 @@
+@import url('./popup.css');
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text {
+    padding: 20px;
+}
+
+.field {
+    background-color: yellow;
+}
