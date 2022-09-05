@@ -65,7 +65,7 @@ header {
 .container{
   width: 1200px;
   height: 847px;
-  background-image: url('../../assets/img/svg/bg.svg');
+  background-image: url('././assets/img/svg/bg.svg');
   background-size: cover;
   margin-bottom: 100px;
   display: flex;
