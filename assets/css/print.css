@@ -1,12 +1,19 @@
+:root{
+  --color-wite: #ffffff;
+  --color-light: #ffffff;
+  --color-dark: green;
+}
+
+
 button.print-button {
-  width: 100px;
-  height: 100px;
+  width: 58px;
+  height: 58px;
 }
 span.print-icon,
 span.print-icon::before,
 span.print-icon::after,
 button.print-button:hover .print-icon::after {
-  border: solid 2px #333;
+  border: solid 2px var(--color-dark);
 }
 span.print-icon::after {
   border-width: 2px;
@@ -26,7 +33,7 @@ span.print-icon::before,
 span.print-icon::after,
 button.print-button:hover .print-icon::after {
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: var(--color-wite);
 }
 
 span.print-icon {
@@ -37,7 +44,7 @@ span.print-icon {
 
   width: 60%;
   height: 35%;
-  background: #fff;
+  background: var(--color-wite);
   border-radius: 20% 20% 0 0;
 }
 
@@ -59,26 +66,26 @@ span.print-icon::after {
   left: 12%;
   right: 12%;
   height: 0%;
-  background: #fff;
+  background: var(--color-wite);
   background-repeat: no-repeat;
   background-size: 70% 90%;
   background-position: center;
   background-image: linear-gradient(
     to top,
-    #fff 0,
-    #fff 14%,
-    #333 14%,
-    #333 28%,
-    #fff 28%,
-    #fff 42%,
-    #333 42%,
-    #333 56%,
-    #fff 56%,
-    #fff 70%,
-    #333 70%,
-    #333 84%,
-    #fff 84%,
-    #fff 100%
+    var(--color-wite) 0,
+    var(--color-wite) 14%,
+    var(--color-dark) 14%,
+    var(--color-dark) 28%,
+    var(--color-wite) 28%,
+    var(--color-wite) 42%,
+    var(--color-dark) 42%,
+    var(--color-dark) 56%,
+    var(--color-wite) 56%,
+    var(--color-wite) 70%,
+    var(--color-dark) 70%,
+    var(--color-dark) 84%,
+    var(--color-wite) 84%,
+    var(--color-wite) 100%
   );
 
   transition: height 0.2s, border-width 0s 0.2s, width 0s 0.2s;

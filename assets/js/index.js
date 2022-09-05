@@ -6,6 +6,27 @@ const form = document.querySelector('.form');
 const button = document.querySelector('.button');
 const input = document.querySelector('.input');
 const fields = document.querySelectorAll('.field');
+const data = document.querySelector('.date');
+const mounthes = ['Января',
+                'Февраля',
+                'Марта',
+                'Апреля',
+                'Мая',
+                'Июня',
+                'Июля',
+                'Августа',
+                'Сентября',
+                'Октября',
+                'Ноября',
+                'Декабря'];
+let date = new Date();
+let day = date.getDate();
+let mounth = date.getMonth();
+let year = date.getFullYear();
+
+
+data.innerHTML = `${day} ${mounthes[mounth]} ${year}`
+
 
 
 fields.forEach(field => {
