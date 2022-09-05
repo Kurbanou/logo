@@ -51,7 +51,11 @@ popup.addEventListener('click', e => { //закрываем popup
     let its_popup = target == popBody || popBody.contains(target);
     let its_button = target == popCls;
 
-    if (!its_popup || its_button ) {
+    // if (!its_popup || its_button ) {
+    //     clsPopup();
+
+    // }
+    if ( its_button ) {
         clsPopup();
 
     }
