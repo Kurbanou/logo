@@ -148,6 +148,11 @@ h3 {
   user-select: none;
 }
 
+.signature .name {
+  font-size: 28px;
+  margin-top: 0;
+}
+
 .date::after {
   content: 'Дата';
   position: absolute;
