@@ -65,7 +65,7 @@ function diploma(){
 function lesorub(){
     container.innerHTML=`<div class="wrapper" style="max-width: 210mm;">
             <div id="section-to-print" class="container" style="background-image: url(./assets/img/fon.png); background-size: contain; width: 210mm; height: 297mm;">
-               <img src="/assets/img/logo.png" alt="logo" width="350">
+               <img src="./assets/img/logo.png" alt="logo" width="350">
                 <div>
                     <h1>диплом</h1>                
                     <h3>Награждается:</h3>
