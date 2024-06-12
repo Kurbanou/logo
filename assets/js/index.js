@@ -39,7 +39,7 @@ function clsPopup() {
 };
 function diploma(){    
     container.innerHTML=`<div class="wrapper" style="max-width: 297mm;">
-            <div id="section-to-print" class="container" style="background-image: url(../../assets/img/svg/bg.svg); background-size: contain; width: 297mm; height: 210mm;">
+            <div id="section-to-print" class="container" style="background-image: url(./assets/img/svg/bg.svg); background-size: contain; width: 297mm; height: 210mm;">
                 <h1 >грамота</h1>
                 <h2 >Почетная</h2>
                 <h3 >Награждается:</h3>
@@ -64,7 +64,7 @@ function diploma(){
 };
 function lesorub(){
     container.innerHTML=`<div class="wrapper" style="max-width: 210mm;">
-            <div id="section-to-print" class="container" style="background-image: url(../../assets/img/fon.png); background-size: contain; width: 210mm; height: 297mm;">
+            <div id="section-to-print" class="container" style="background-image: url(./assets/img/fon.png); background-size: contain; width: 210mm; height: 297mm;">
                <img src="/assets/img/logo.png" alt="logo" width="350">
                 <div>
                     <h1>диплом</h1>                
