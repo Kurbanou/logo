@@ -7,6 +7,10 @@ const button = document.querySelector('.button');
 const input = document.querySelector('.input');
 const fields = document.querySelectorAll('.field');
 const data = document.querySelector('.date');
+const container = document.querySelector('main');
+const first = document.querySelector('.fisrt');
+const second = document.querySelector('.second');
+const third = document.querySelector('.third');
 const mounthes = ['Января',
                 'Февраля',
                 'Марта',
@@ -75,3 +79,46 @@ function clsPopup() {
     popBody.style.transitionDelay = '0s';
     form.reset();
 }
+
+
+function diploma(){
+    container.innerHTML=`<div class="wrapper" style="max-width: 297mm;">
+            <div id="section-to-print" class="container" style="background-image: url(/assets/img/svg/bg.svg); background-size: contain; width: 297mm; height: 210mm;">
+                <h1 >грамота</h1>
+                <h2 >Почетная</h2>
+                <h3 >Награждается:</h3>
+                <div class="name field">Name Surname</div>
+                <div class="text field">
+                    За добросовестный и плодотворный труд в лесном хозяйстве, достижение высоких результатов по использованию, охране, защите лесного фонда и воспроизводству лесов и в связи с профессиональным праздником "Днём работников леса"
+                </div>
+                <div class="atribut">
+                    <div class="date"></div>
+                    <div class="signature"><div class="name">А. Ч. Бумбуль</div> </div>
+                </div>   
+            </div>
+        </div>`
+};
+function lesorub(){
+    container.innerHTML=`<div class="wrapper" style="max-width: 210mm;">
+            <div id="section-to-print" class="container" style="background-image: url(/assets/img/fon.png); background-size: contain; width: 210mm; height: 297mm;">
+               <img src="/assets/img/logo.png" alt="logo" width="350">
+                <div>
+                    <h1>диплом</h1>                
+                    <h3>Награждается:</h3>
+                </div>
+                <div>
+                    <div class="name field">команда Скидельского лесничества</div>
+                    <div class="text field">
+                        занявшая I общекомандное место в соревнованиях вальщиков леса Скидельского лесхоза "Лесоруб 2024"
+                    </div>
+                </div>   
+                <div class="atribut">
+                    <div class="date"></div>
+                    <div class="signature"><div class="name">А. Ч. Бумбуль</div> </div>
+                </div>   
+            </div>
+        </div>`
+};
+
+first.addEventListener("click", diploma);
+second.addEventListener("click", lesorub);
