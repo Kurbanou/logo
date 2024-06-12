@@ -1,4 +1,7 @@
 'use strict';
+const first = document.querySelector('.fisrt');
+const second = document.querySelector('.second');
+const third = document.querySelector('.third');
 const popup = document.querySelector('.popup');
 const popBody = document.querySelector('.popup__content');
 const popCls = document.querySelector('.x');
@@ -6,11 +9,7 @@ const form = document.querySelector('.form');
 const button = document.querySelector('.button');
 const input = document.querySelector('.input');
 const fields = document.querySelectorAll('.field');
-const data = document.querySelector('.date');
 const container = document.querySelector('main');
-const first = document.querySelector('.fisrt');
-const second = document.querySelector('.second');
-const third = document.querySelector('.third');
 const mounthes = ['Января',
                 'Февраля',
                 'Марта',
@@ -27,61 +26,18 @@ let date = new Date();
 let day = date.getDate();
 let mounth = date.getMonth();
 let year = date.getFullYear();
-
-
-data.innerHTML = `${day} ${mounthes[mounth]} ${year}`
-
-
-
-fields.forEach(field => {
-    field.addEventListener('dblclick', () => {
-        openPopup();
-        field.classList.add('modify');
-        input.innerHTML = field.innerHTML;
-    })
-})
-
-
-button.addEventListener('click', () => {
-    const modify = document.querySelector('.modify');
-    modify.innerHTML = input.value;
-    modify.classList.remove('modify');
-    clsPopup();
-})
-
-
-popup.addEventListener('click', e => { //закрываем popup
-    let target = e.target;
-    let its_popup = target == popBody || popBody.contains(target);
-    let its_button = target == popCls;
-
-    // if (!its_popup || its_button ) {
-    //     clsPopup();
-
-    // }
-    if ( its_button ) {
-        clsPopup();
-
-    }
-})
-
-
 function openPopup() {
     popup.classList.add('popup_open');
     document.body.classList.add('open');
     popBody.style.transitionDelay = `0.9s`;
-}
-
-
+};
 function clsPopup() {
     popup.classList = 'popup';
     document.body.classList = '';
     popBody.style.transitionDelay = '0s';
     form.reset();
-}
-
-
-function diploma(){
+};
+function diploma(){    
     container.innerHTML=`<div class="wrapper" style="max-width: 297mm;">
             <div id="section-to-print" class="container" style="background-image: url(/assets/img/svg/bg.svg); background-size: contain; width: 297mm; height: 210mm;">
                 <h1 >грамота</h1>
@@ -97,6 +53,14 @@ function diploma(){
                 </div>   
             </div>
         </div>`
+        document.querySelector('.date').innerHTML = `${day} ${mounthes[mounth]} ${year}`;
+        document.querySelectorAll('.field').forEach(field => {
+            field.addEventListener('dblclick', () => {
+                openPopup();
+                field.classList.add('modify');
+                input.innerHTML = field.innerHTML;
+            })
+        })
 };
 function lesorub(){
     container.innerHTML=`<div class="wrapper" style="max-width: 210mm;">
@@ -118,7 +82,47 @@ function lesorub(){
                 </div>   
             </div>
         </div>`
+        document.querySelector('.date').innerHTML = `${day} ${mounthes[mounth]} ${year}`;
+        document.querySelectorAll('.field').forEach(field => {
+            field.addEventListener('dblclick', () => {
+                openPopup();
+                field.classList.add('modify');
+                input.innerHTML = field.innerHTML;
+            })
+        })
 };
+
+button.addEventListener('click', () => {
+    const modify = document.querySelector('.modify');
+    modify.innerHTML = input.value;
+    modify.classList.remove('modify');
+    clsPopup();
+});
+
+document.querySelector('.date').innerHTML = `${day} ${mounthes[mounth]} ${year}`;
+document.querySelectorAll('.field').forEach(field => {
+    field.addEventListener('dblclick', () => {
+        openPopup();
+        field.classList.add('modify');
+        input.innerHTML = field.innerHTML;
+    })
+});
+
+
+popup.addEventListener('click', e => { //закрываем popup
+    let target = e.target;
+    let its_popup = target == popBody || popBody.contains(target);
+    let its_button = target == popCls;
+
+    // if (!its_popup || its_button ) {
+    //     clsPopup();
+
+    // }
+    if ( its_button ) {
+        clsPopup();
+
+    }
+});
 
 first.addEventListener("click", diploma);
 second.addEventListener("click", lesorub);
