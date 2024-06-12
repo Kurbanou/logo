@@ -61,7 +61,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 3px;
-  width: 80%;
+  width: 350px;
 }
 
 .popup_open .popup__content{
