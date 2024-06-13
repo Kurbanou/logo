@@ -76,6 +76,7 @@ h1 {
   color: #926188; 
   user-select: none; 
   text-align: center;
+  line-height: 2em;
 }
 
 h2 {
@@ -93,7 +94,7 @@ h3 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 30px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   line-height: 0;  
   color: #4F4C40; 
   user-select: none;
