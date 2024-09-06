@@ -40,7 +40,7 @@ function clsPopup() {
 function diploma(){    
     container.innerHTML=`<div class="wrapper" style="max-width: 297mm;">
             <div id="section-to-print" class="container" style="background-image: url(./assets/img/svg/bg.svg); background-size: contain; width: 297mm; height: 210mm;">
-                <h1 style="color:#fcc201;">грамота</h1>
+                <h1 style ="color: #1b4d3e;">грамота</h1>
                 <!-- <h2 >Почетная</h2> -->
                 <h3 >Награждается:</h3>
                 <div class="name field">Name Surname</div>
