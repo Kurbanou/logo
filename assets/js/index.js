@@ -37,6 +37,33 @@ function clsPopup() {
     popBody.style.transitionDelay = '0s';
     form.reset();
 };
+
+function doska(){    
+    container.innerHTML=`<div class="wrapper" style="max-width: 297mm;">
+            <div id="section-to-print" class="container" style="background-image: url(./assets/img/svg/bg.svg); background-size: contain; width: 297mm; height: 210mm;">
+                <h1 style ="color: #1b4d3e; font-size:60px">свидетельство</h1>
+                <h2 >О занесении на доску почета Скидельского лесхоза</h2>
+                
+                <div class="name field">Name Surname</div>
+                <div class="text field">
+                    За добросовестный и плодотворный труд в лесном хозяйстве, достижение высоких результатов по использованию, охране, защите лесного фонда и воспроизводству лесов и в связи с профессиональным праздником "Днём работников леса"
+                </div>
+                <div class="atribut">
+                    <div class="date"></div>
+                    <div class="signature"><div class="name">А. Ч. Бумбуль</div> </div>
+                </div>   
+            </div>
+        </div>`
+        document.querySelector('.date').innerHTML = `${day} ${mounthes[mounth]} ${year}`;
+        document.querySelectorAll('.field').forEach(field => {
+            field.addEventListener('dblclick', () => {
+                openPopup();
+                field.classList.add('modify');
+                input.innerHTML = field.innerHTML;
+            })
+        })
+};
+
 function diploma(){    
     container.innerHTML=`<div class="wrapper" style="max-width: 297mm;">
             <div id="section-to-print" class="container" style="background-image: url(./assets/img/svg/bg.svg); background-size: contain; width: 297mm; height: 210mm;">
@@ -126,3 +153,4 @@ popup.addEventListener('click', e => { //закрываем popup
 
 first.addEventListener("click", diploma);
 second.addEventListener("click", lesorub);
+third.addEventListener("click", doska);
