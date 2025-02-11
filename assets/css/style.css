@@ -77,12 +77,13 @@ h1, h2 {
   user-select: none; 
   text-align: center;
   line-height: 0;  
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 h2 {
   font-size: 40px;
-  margin-bottom: 40px;
+  color: #fcc201;
+  
 }
 
 h3 {
